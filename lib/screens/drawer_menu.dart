@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sewa/screens/my_car_default_widget.dart';
 
-import 'booking_pending_widget.dart';
 
+import 'home_default_widget.dart';
 import 'login_owner_widget.dart';
 import 'my_profile_owner.dart';
 
@@ -45,7 +45,7 @@ class DrawerMenu extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => BookingPendingWidget()));
+                    builder: (BuildContext context) => HomeDefaultWidget()));
               }),
           new ListTile(
               title: new Text("My Car",
