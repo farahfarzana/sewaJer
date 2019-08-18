@@ -1,5 +1,6 @@
 
 
+import 'package:firstsewa/screens/profile_info_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'home_default_widget.dart';
@@ -243,7 +244,10 @@ class MyProfileOwner extends StatelessWidget {
   icon: Icon(Icons.arrow_forward_ios, size: 16),
   
   
-  alignment: Alignment.centerLeft, onPressed: () {},
+  alignment: Alignment.centerLeft,  onPressed: () {
+             Navigator.of(context).push(MaterialPageRoute(
+      builder: (BuildContext context) => ProfileInfoWidget()));
+            },
 ),
                                         
                   ],

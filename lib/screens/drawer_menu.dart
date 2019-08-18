@@ -1,5 +1,7 @@
+import 'package:firstsewa/screens/my_car_default_widget.dart';
+import 'package:firstsewa/screens/rental_policy.dart';
+
 import 'package:flutter/material.dart';
-import 'package:sewa/screens/my_car_default_widget.dart';
 
 
 import 'home_default_widget.dart';
@@ -72,6 +74,8 @@ class DrawerMenu extends StatelessWidget {
               leading: new Icon(Icons.description, color: Colors.yellow),
               onTap: () {
                 Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => RentalPolicy()));
               }),
           new ListTile(
               title: new Text("My Profile",
@@ -129,6 +133,7 @@ class DrawerMenu extends StatelessWidget {
                   new Icon(Icons.perm_device_information, color: Colors.yellow),
               onTap: () {
                 Navigator.of(context).pop();
+           
               }),
           new ListTile(
               title: new Text("Help",
@@ -198,3 +203,7 @@ class DrawerMenu extends StatelessWidget {
     );
   }
 }
+
+class CarBrandWidget {}
+
+class RentalPolicyWidget {}

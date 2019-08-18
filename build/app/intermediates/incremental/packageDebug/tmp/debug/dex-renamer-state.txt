@@ -1,0 +1,4 @@
+#Tue Jul 30 22:53:26 SGT 2019
+base.0=D\:\\Degree\\SEM 8\\Testing\\firstsewa\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

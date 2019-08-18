@@ -1,5 +1,5 @@
 
-import 'package:sewa/screens/reset_password_owner_widget.dart';
+import 'package:firstsewa/screens/reset_password_owner_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'login_owner_widget.dart';
@@ -24,7 +24,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                 actions: <Widget>[
                   IconButton(
             icon: const Icon(Icons.home),
-            tooltip: 'New Page',
+            
             onPressed: () {
              Navigator.of(context).push(MaterialPageRoute(
       builder: (BuildContext context) => LoginOwnerWidget()));
@@ -49,7 +49,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                         color: Color.fromARGB(255, 66, 66, 66),
                                         fontSize: 20,
                                         
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w800,
                                     ),
                                     textAlign: TextAlign.left,
@@ -66,7 +66,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                         color: Color.fromARGB(255, 66, 66, 66),
                                         fontSize: 18,
                                         
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.left,
@@ -84,7 +84,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                         color: Color.fromARGB(255, 66, 66, 66),
                                         fontSize: 14,
                                        
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w400,
                                     ),
                                     textAlign: TextAlign.left,
@@ -101,7 +101,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                         color: Color.fromARGB(255, 66, 66, 66),
                                         fontSize: 14,
                                         
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w600,
                                     ),
                                     textAlign: TextAlign.left,
@@ -130,7 +130,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color.fromARGB(255, 66, 66, 66),
                                         fontSize: 14,
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w500,
                                     ),
                                     maxLines: 1,
@@ -151,7 +151,7 @@ class ForgotPasswordOwnerWidget extends StatelessWidget {
                                     "Submit",
                                     style: TextStyle(
                                         fontSize: 18,
-                                        fontFamily: "Assasin",
+                                        fontFamily: "Assistant",
                                         fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.center,

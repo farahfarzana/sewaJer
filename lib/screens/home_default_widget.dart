@@ -1,11 +1,14 @@
-import 'package:sewa/screens/drawer_menu.dart';
+import 'package:firstsewa/screens/booking_rejected_widget.dart';
+import 'package:firstsewa/screens/drawer_menu.dart';
 import 'package:flutter/material.dart';
 
-import 'booking_pending_widget.dart';
+import 'booking_approved_widget.dart';
+import 'booking_completed_widget.dart';
+import 'booking_pending1.dart';
+
 
 class HomeDefaultWidget extends StatelessWidget {
-  void onPendingPressed(BuildContext context) => Navigator.push(
-      context, MaterialPageRoute(builder: (context) => BookingPendingWidget()));
+  
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -56,7 +59,10 @@ class HomeDefaultWidget extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(3)),
               ),
               child: FlatButton(
-                onPressed: () => this.onPendingPressed(context),
+                onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => BookingPending1()));
+            },
                 
                 padding: EdgeInsets.all(0),
                 child: Row(
@@ -64,14 +70,14 @@ class HomeDefaultWidget extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(left: 36),
                       child: Text(
-                        "10",
+                        "1",
                         style: TextStyle(
                           color: Color.fromARGB(255, 66, 66, 66),
                           fontSize: 24,
                           fontFamily: "Assistant",
                           fontWeight: FontWeight.w700,
                         ),
-                        textAlign: TextAlign.left,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     Container(
@@ -81,7 +87,7 @@ class HomeDefaultWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 245, 245, 245),
                       ),
-                      child: Container(),
+                       child: Container(),
                     ),
                     Expanded(
                       flex: 1,
@@ -149,77 +155,81 @@ class HomeDefaultWidget extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(3)),
               ),
               child: FlatButton(
-                onPressed: () => this.onPendingPressed(context),
-               
+                 onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => BookingApprovedWidget()));
+            },
+                
                 padding: EdgeInsets.all(0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 44, top: 23),
-                    child: Text(
-                      "3",
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 66, 66, 66),
-                        fontSize: 24,
-                        fontFamily: "Assistant",
-                        fontWeight: FontWeight.w700,
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 36),
+                      child: Text(
+                        "3",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 66, 66, 66),
+                          fontSize: 24,
+                          fontFamily: "Assistant",
+                          fontWeight: FontWeight.w700,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.left,
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
+                    Container(
                       width: 1,
                       height: 72,
-                      margin: EdgeInsets.only(left: 43),
+                      margin: EdgeInsets.only(left: 35),
                       decoration: BoxDecoration(
                         color: Color.fromARGB(255, 245, 245, 245),
                       ),
                       child: Container(),
                     ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      height: 46,
-                      margin: EdgeInsets.only(left: 5, top: 12, right: 6),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "Approved",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 66, 66, 66),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w800,
-                                fontFamily: "Assistant",
+                    Expanded(
+                      flex: 1,
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Container(
+                          height: 42,
+                          margin: EdgeInsets.only(left: 6, top: 16, right: 15),
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Positioned(
+                                left: 0,
+                                top: 0,
+                                child: Text(
+                                  "Approved",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 66, 66, 66),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w800,
+                                    fontFamily: "Assistant",
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
                               ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "Last approved on: 11 June 2019",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 66, 66, 66),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: "Assistant",
+                              Positioned(
+                                top: 23,
+                                left: 0,
+                                child: Text(
+                                  "Last approved on: 3 July 2019",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 66, 66, 66),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: "Assistant",
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
                               ),
-                              textAlign: TextAlign.left,
-                            ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
               ),
             ),
             Container(
@@ -241,7 +251,10 @@ class HomeDefaultWidget extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(3)),
               ),
                 child: FlatButton(
-                onPressed: () => this.onPendingPressed(context),
+                 onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => BookingCompletedWidget()));
+            },
                 
                 padding: EdgeInsets.all(0),
               child: Row(
@@ -250,14 +263,14 @@ class HomeDefaultWidget extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(left: 36, top: 23),
                     child: Text(
-                      "15",
+                      "1",
                       style: TextStyle(
                         color: Color.fromARGB(255, 66, 66, 66),
                         fontSize: 24,
                         fontFamily: "Assistant",
                         fontWeight: FontWeight.w700,
                       ),
-                      textAlign: TextAlign.left,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Align(
@@ -335,7 +348,10 @@ class HomeDefaultWidget extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(3)),
               ),
                 child: FlatButton(
-                onPressed: () => this.onPendingPressed(context),
+                onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => BookingRejectedWidget()));
+            },
                 
                 padding: EdgeInsets.all(0),
               child: Row(
@@ -343,7 +359,7 @@ class HomeDefaultWidget extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(left: 36),
                     child: Text(
-                      "10",
+                      "2",
                       style: TextStyle(
                         color: Color.fromARGB(255, 66, 66, 66),
                         fontSize: 24,
@@ -390,7 +406,7 @@ class HomeDefaultWidget extends StatelessWidget {
                               top: 23,
                               left: 0,
                               child: Text(
-                                "Last rejected on: -",
+                                "Last rejected on: 28 June 2019",
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 66, 66, 66),
                                   fontSize: 16,

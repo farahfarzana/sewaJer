@@ -1,4 +1,4 @@
-import 'package:sewa/screens/register_owner_widget.dart';
+import 'package:firstsewa/screens/register_owner_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'forgot_password_owner_widget.dart';
@@ -173,7 +173,7 @@ class LoginOwnerWidget extends StatelessWidget {
                   
                   Container(
                     height: 48,
-                    margin: EdgeInsets.only(bottom: 16),
+                    margin: EdgeInsets.only(bottom: 20),
                     child: FlatButton(
                       onPressed: () => this.onLoginMePressed(context),
                       color: Color.fromARGB(255, 255, 202, 5),
@@ -192,6 +192,7 @@ class LoginOwnerWidget extends StatelessWidget {
                   ),
                   Container(
                     height: 48,
+                    
                     child: FlatButton(
                       onPressed: () => this.onSignupPressed(context),
                       color: Color.fromARGB(255, 66, 66, 66),
